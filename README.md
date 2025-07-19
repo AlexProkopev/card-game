@@ -1,70 +1,79 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<body>
+  <h1>CRA + MUI + React Router + Redux Toolkit + Axios</h1>
 
-## Available Scripts
+  <h2>О проекте</h2>
+  <p>
+    Это шаблон React-приложения, созданный с помощью <code>Create React App (CRA)</code> с интеграцией популярных библиотек:
+  </p>
+  <ul>
+    <li><strong>Material UI (MUI)</strong> — современная библиотека компонентов для React с реализацией Material Design.</li>
+    <li><strong>React Router</strong> — для маршрутизации и навигации по страницам.</li>
+    <li><strong>Redux Toolkit (RTK)</strong> — упрощённый и мощный инструмент для управления состоянием приложения.</li>
+    <li><strong>Axios</strong> — удобная библиотека для HTTP-запросов к API.</li>
+  </ul>
+  <p>
+    Этот шаблон предназначен для быстрого старта новых проектов на React с готовой базовой структурой и настройками.
+  </p>
 
-In the project directory, you can run:
+  <hr />
 
-### `npm start`
+  <h2>Что внутри</h2>
+  <ul>
+    <li><code>/public</code> — публичные статические файлы (index.html, favicon и т.д.).</li>
+    <li><code>/src</code> — исходный код приложения:
+      <ul>
+        <li><code>/app/store.js</code> — конфигурация Redux store.</li>
+        <li><code>/redux/</code> — слайсы Redux Toolkit (например, exampleSlice.js).</li>
+        <li><code>/Pages/</code> — компоненты страниц для маршрутизации.</li>
+        <li><code>/Components/</code> — переиспользуемые компоненты UI.</li>
+          <li><code>routes.js/</code> — роуты для маршрутизации.</li>
+        <li><code>App.js</code> — главный компонент с настройкой роутов.</li>
+        <li><code>index.js</code> — точка входа, подключение Redux Provider и React Router.</li>
+      </ul>
+    </li>
+  </ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <hr />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <h2>Как запустить</h2>
+  <ol>
+    <li>Клонируйте репозиторий:
+      <pre>git clone https://github.com/AlexProkopev/cra-router-mui.git</pre>
+    </li>
+    <li>Перейдите в папку проекта:
+      <pre>cd cra-router-mui</pre>
+    </li>
+    <li>Установите зависимости:
+      <pre>npm install</pre>
+    </li>
+    <li>Запустите локальный сервер разработки:
+      <pre>npm start</pre>
+    </li>
+  </ol>
+  <p>Приложение откроется в браузере по адресу <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a></p>
 
-### `npm test`
+  <hr />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <h2>Как использовать</h2>
+  <ul>
+    <li>Добавляйте страницы в папку <code>/src/pages</code> и подключайте их в <code>App.js</code> через React Router.</li>
+    <li>Создавайте Redux-слайсы в <code>/src/features</code> для управления состоянием.</li>
+    <li>Используйте MUI компоненты и стили для UI.</li>
+    <li>Делайте HTTP-запросы через Axios (например, в <code>useEffect</code> или Redux-thunk).</li>
+  </ul>
 
-### `npm run build`
+  <hr />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <h2>Как собрать на продакшен</h2>
+  <pre>npm run build</pre>
+  <p>После сборки папка <code>/build</code> будет содержать готовые файлы для деплоя.</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <hr />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  <footer>
+    <p>Лицензия MIT © <a href="https://github.com/AlexProkopev" target="_blank" rel="noopener">AlexProkopev</a></p>
+    <p>Если нужны доработки или помощь — открывайте <a href="https://github.com/AlexProkopev/cra-router-mui/issues" target="_blank" rel="noopener">Issues</a> в репозитории.</p>
+  </footer>
+</body>
+</html>
