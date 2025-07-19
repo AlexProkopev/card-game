@@ -29,6 +29,7 @@
         <li><code>/Components/</code> — переиспользуемые компоненты UI.</li>
           <li><code>routes.js/</code> — роуты для маршрутизации.</li>
         <li><code>App.js</code> — главный компонент с настройкой роутов.</li>
+        <li><code>theme.js</code> — главный конфиг с настройкой кастомных стилей и контейнера.</li>
         <li><code>index.js</code> — точка входа, подключение Redux Provider и React Router.</li>
       </ul>
     </li>
