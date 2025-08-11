@@ -1,9 +1,22 @@
-import { Typography } from '@mui/material'
-import React from 'react'
+import Balance from "../../Components/Balance/Balance"
+import BalanceBarCounter from "../../Components/BalanceBarCounter/BalanceBarCounter"
+import CardsFrontSide from "../../Components/CardsFrontSide/CardsFrontSide"
+import ClaimBtn from "../../Components/ClaimBtn/ClaimBtn"
+import Header from "../../Components/Header/Header"
+
 
 function Home() {
   return (
-    <Typography >Home</Typography>
+
+
+
+<>
+<Header/>
+<Balance/>
+<CardsFrontSide/>
+<BalanceBarCounter/>
+<ClaimBtn/>
+</>
   )
 }
 
