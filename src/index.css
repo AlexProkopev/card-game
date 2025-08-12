@@ -3,6 +3,11 @@
 @tailwind utilities;
 @import "@fontsource/inter";
 
+html, body {
+  margin-top: 0;
+}
+
+
 body {
   background-image:
     radial-gradient(
@@ -12,11 +17,13 @@ body {
     ),
     url('./assets/bg.jpg');
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+  background-repeat: repeat-x;
   background-attachment: fixed;
   background-blend-mode: multiply;
-}
+
+} 
+
 
 
 code {
@@ -24,28 +31,22 @@ code {
     monospace;
 }
 
-/* Сброс для основных блоков текста */
 p, h1, h2, h3, h4, h5, h6, blockquote, pre {
   margin: 0;
   padding: 0;
 }
 
-/* Сброс отступов и маркеров у списков */
 ul, ol {
   margin: 0;
-  padding-left: 1.25rem; /* или 20px, можно регулировать */
-  list-style: none; /* убирает маркеры и номера */
+  padding-left: 1.25rem; 
+  list-style: none; 
 }
 
-/* Чтобы можно было вернуть стандартные маркеры, если надо, можно создавать классы отдельно */
-
-/* Сброс для элементов списка */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* Сброс для inline элементов, если надо */
 a, span, strong, em {
   margin: 0;
   padding: 0;
@@ -54,7 +55,6 @@ a, span, strong, em {
   text-decoration: none;
 }
 
-/* Дополнительно можно добавить box-sizing для удобства */
 *,
 *::before,
 *::after {

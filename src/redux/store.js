@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { exampleReducer } from "./exampleReducer/example.reducer";
+import {gamesValuesReducer } from "./exampleReducer/gamesValues.reducer";
 
 
 export const store = configureStore({
   reducer: {
-     exampleStore: exampleReducer,
+     gamesValuesStore: gamesValuesReducer,
   },
 });
 

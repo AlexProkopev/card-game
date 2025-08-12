@@ -1,12 +1,5 @@
-
 function Layout({ children }) {
-  return (
-
-
-      <main className="p-4">{children}</main>
-
-
-  );
+  return <section className="container mx-auto px-4">{children}</section>;
 }
 
 export default Layout;
