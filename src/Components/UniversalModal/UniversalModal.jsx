@@ -1,8 +1,15 @@
 import useModal from "../../hooks/useModal";
 import logoPath from "../../assets/white-green-logo.svg";
+import { useEffect } from "react";
 
 function UniversalModal({ children, backGround }) {
   const { isOpen, openModal, closeModal } = useModal();
+
+  useEffect(()=>{
+      openModal();
+  },[openModal])
+
+
 
   return (
     <div
@@ -24,9 +31,9 @@ function UniversalModal({ children, backGround }) {
         }}
       >
    
-        <div className="modal-content ">
+        <div className="flex justify-center items-center flex-col gap-4">
           {children}
-          <button onClick={() => closeModal()}>Close</button>
+         
         </div>
       </div>
     </div>

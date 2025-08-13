@@ -17,6 +17,7 @@ import UniversalModal from "../../Components/UniversalModal/UniversalModal";
 import BoomModal from "../../Components/BoomModal/BoomModal";
 import claimModalBg from "../../assets/claim-modal-light.png";
 import boomModalBg from "../../assets/bomb-light-modal.png";
+import ClaimModal from "../../Components/ClaimModal/ClaimModal";
 
 function Home() {
   const isBombOpen = useSelector(selectBombIsOpen);
@@ -49,7 +50,7 @@ function Home() {
        <>
         <CoinLayerAnimation imgSrc={coinImg} count={50} height={500} />
            <UniversalModal backGround={claimModalBg}>
-        <BoomModal />
+        <ClaimModal />
       </UniversalModal>
       </>
 
