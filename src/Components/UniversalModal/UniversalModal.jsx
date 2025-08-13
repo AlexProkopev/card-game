@@ -3,13 +3,11 @@ import logoPath from "../../assets/white-green-logo.svg";
 import { useEffect } from "react";
 
 function UniversalModal({ children, backGround }) {
-  const { isOpen, openModal, closeModal } = useModal();
+  const { openModal } = useModal();
 
-  useEffect(()=>{
-      openModal();
-  },[openModal])
-
-
+  useEffect(() => {
+    openModal();
+  }, [openModal]);
 
   return (
     <div
@@ -26,14 +24,12 @@ function UniversalModal({ children, backGround }) {
         style={{
           backgroundImage: `url(${backGround})`,
           backgroundSize: "cover",
-          backgroundPosition: "center", 
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
-   
         <div className="flex justify-center items-center flex-col gap-4">
           {children}
-         
         </div>
       </div>
     </div>

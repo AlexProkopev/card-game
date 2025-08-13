@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
   claim,
-  startGame,
 } from "../../redux/exampleReducer/gamesValues.reducer";
 import {
   selectBalance,
@@ -17,9 +16,7 @@ function ClaimBtn() {
     if (isGameOver) return;
     dispatch(claim());
   };
-  const handleNewGame = () => {
-    dispatch(startGame());
-  };
+ 
   return (
     <div>
       <button
