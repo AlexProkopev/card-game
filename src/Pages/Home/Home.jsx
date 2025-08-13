@@ -5,13 +5,17 @@ import BalanceBarCounter from "../../Components/BalanceBarCounter/BalanceBarCoun
 import CardsFrontSide from "../../Components/CardsFrontSide/CardsFrontSide"
 import ClaimBtn from "../../Components/ClaimBtn/ClaimBtn"
 import Header from "../../Components/Header/Header"
-import { selectBombIsOpen } from "../../redux/exampleReducer/gamesValues.selectors"
+import { selectBombIsOpen, selectToClaim } from "../../redux/exampleReducer/gamesValues.selectors"
 import BoomAnimation from "../../Components/BoomAnimation/BoomAnimation"
+import CoinLayerAnimation from "../../Components/CoinLayerAnimation/CoinLayerAnimation"
+import coinImg from "../../assets/smal-doll.svg"
+
 
 
 function Home() {
 
   const isBombOpen = useSelector(selectBombIsOpen);
+  const isClaim = useSelector(selectToClaim);
 
   return (
 
@@ -25,6 +29,7 @@ function Home() {
 <ClaimBtn />
 
 {isBombOpen && <BoomAnimation />}
+{isClaim &&  <CoinLayerAnimation imgSrc={coinImg} count={50} height={500} />}
 </div>
   )
 }

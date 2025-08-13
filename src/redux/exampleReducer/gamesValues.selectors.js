@@ -5,5 +5,6 @@ export const selectGameOver = store => store.gamesValuesStore.gameOver;
 export const selectOpenedCells = store => store.gamesValuesStore.openedCells;
 export const selectClaimBalance = store => store.gamesValuesStore.claimBalance;
 export const selectBombIsOpen = store => store.gamesValuesStore.bombIsOpen;
+export const selectToClaim = store => store.gamesValuesStore.toClaim;
 
 

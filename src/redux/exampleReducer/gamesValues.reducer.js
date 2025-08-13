@@ -7,6 +7,7 @@ const initialState = {
   gameOver: false,
   openedCells: [],
   bombIsOpen: false,
+  toClaim: false
 };
 
 const shuffle = (array) => {
@@ -40,6 +41,7 @@ const gamesValues = createSlice({
       state.gameOver = false;
       state.openedCells = [];
       state.bombIsOpen = false;
+      state.toClaim = false
     },
     openCell(state, action) {
       const index = action.payload;
@@ -72,6 +74,7 @@ const gamesValues = createSlice({
       state.gameOver = true;
       state.board.forEach((c) => (c.opened = true));
       state.claimBalance += state.balance;
+      state.toClaim = true;
     },
   },
 });

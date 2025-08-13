@@ -4,7 +4,7 @@ import dollSvg from "../../assets/doll.svg";
 import bombSvg from "../../assets/bomb-big.svg";
 import cash from "../../assets/cash-big.svg";
 import x2Svg from "../../assets/double-big.svg";
-import emptySvg from "../../assets/zero-big.svg";
+import emptySvg from "../../assets/zero-big.png";
 import {
   openCell,
   startGame,

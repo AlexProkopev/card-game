@@ -13,6 +13,7 @@ function ClaimBtn() {
   const isGameOver = useSelector(selectGameOver);
   const balance = useSelector(selectBalance);
   const handleClaim = () => {
+    if (balance <= 0) return;
     if (isGameOver) return;
     dispatch(claim());
   };
