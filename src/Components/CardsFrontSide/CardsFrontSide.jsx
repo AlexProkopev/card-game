@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import dollSvg from "../../assets/doll.svg";
-import bombSvg from "../../assets/bomb-big.svg";
+import bombSvg from "../../assets/bomb-big.png";
 import cash from "../../assets/cash-big.svg";
 import x2Svg from "../../assets/double-big.svg";
 import emptySvg from "../../assets/zero-big.png";
@@ -11,6 +11,7 @@ import {
 } from "../../redux/exampleReducer/gamesValues.reducer";
 import { selectBoard } from "../../redux/exampleReducer/gamesValues.selectors";
 import { useEffect } from "react";
+import CardBackSide from "../CardBackSide/CardBackSide";
 
 function CardsFrontSide() {
   const dispatch = useDispatch();
@@ -19,9 +20,6 @@ function CardsFrontSide() {
   useEffect(() => {
     dispatch(startGame());
   }, [dispatch]);
-
-  const styleDouble =
-    "w-[85px] h-[85px] relative bg-gradient-to-b from-white/10 to-white/5 rounded-xl shadow-[0px_4px_8px_0px_rgba(24,26,32,0.30)] shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,0.20)] backdrop-blur-blur flex justify-center items-center mx-auto";
 
   const handleClick = (index) => {
     dispatch(openCell(index));
@@ -44,19 +42,24 @@ function CardsFrontSide() {
   };
 
   return (
-    <ul className="mx-auto flex flex-wrap gap-[4px] pl-0 w-[300px]">
+    <ul className="mx-auto flex flex-wrap justify-center items-center gap-[4px] pl-0 w-[300px]">
       {board?.map((cell, index) => (
         <li
           key={cell.id}
-          className={styleDouble}
+          className="w-[85px] h-[85px] perspective"
           onClick={() => handleClick(index)}
         >
-          <img src={getIcon(cell)} alt={cell.type} />
-          {cell.opened && cell.type === "cash" && (
-            <span className="absolute bottom-1 text-xs text-white">
-              +{cell.value}
-            </span>
-          )}
+          <article
+            className={`  relative w-full h-full duration-500 transform-style preserve-3d ${
+              cell.opened ? "rotate-y-180" : ""
+            }`}
+          >
+            <div className="absolute w-full h-full flex justify-center items-center bg-gradient-to-b from-white/10 to-white/5 rounded-xl shadow-md backface-hidden">
+              <img src={dollSvg} alt="front" />
+            </div>
+
+            <CardBackSide getIcon={getIcon} cell={cell} />
+          </article>
         </li>
       ))}
     </ul>

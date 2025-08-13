@@ -37,12 +37,22 @@ module.exports = {
             transform: 'translate(var(--dx), var(--dy)) scale(0.8) rotate(var(--rot))',
             opacity: '0',
           },
-        },
+        
+         perspective: {
+        '1000': '1000px',
+      },
+      rotate: {
+        'y-180': '180deg',
+      },
+      backfaceVisibility: {
+        hidden: 'hidden',
+      },
+    },
       },
       animation: {
         explode: "explode 1.5s ease-out forwards",
         shardFly: "shardFly 1s ease-out forwards",
-       coinFlyUp: 'coinFlyUp 1.8s ease-out forwards'
+       coinFlyUp: 'coinFlyUp 1.8s ease-out forwards',
       },
     },
   },

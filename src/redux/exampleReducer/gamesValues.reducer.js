@@ -76,8 +76,11 @@ const gamesValues = createSlice({
       state.claimBalance += state.balance;
       state.toClaim = true;
     },
+    isBoom(state){
+      state.claimBalance = 0;
+    }
   },
 });
-export const { startGame, openCell, claim } = gamesValues.actions;
+export const { startGame, openCell, claim, isBoom } = gamesValues.actions;
 
 export const gamesValuesReducer = gamesValues.reducer;
