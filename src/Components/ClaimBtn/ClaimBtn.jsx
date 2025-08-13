@@ -41,7 +41,6 @@ function ClaimBtn() {
       >
         Claim
       </button>
-      <button onClick={handleNewGame}>Start New</button>
     </div>
   );
 }

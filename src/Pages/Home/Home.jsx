@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import {useSelector } from "react-redux";
 import Balance from "../../Components/Balance/Balance";
 import BalanceBarCounter from "../../Components/BalanceBarCounter/BalanceBarCounter";
 import CardsFrontSide from "../../Components/CardsFrontSide/CardsFrontSide";
@@ -11,8 +11,6 @@ import {
 import BoomAnimation from "../../Components/BoomAnimation/BoomAnimation";
 import CoinLayerAnimation from "../../Components/CoinLayerAnimation/CoinLayerAnimation";
 import coinImg from "../../assets/smal-doll.svg";
-import { useEffect } from "react";
-import { isBoom } from "../../redux/exampleReducer/gamesValues.reducer";
 import UniversalModal from "../../Components/UniversalModal/UniversalModal";
 import BoomModal from "../../Components/BoomModal/BoomModal";
 import claimModalBg from "../../assets/claim-modal-light.png";
@@ -22,13 +20,6 @@ import ClaimModal from "../../Components/ClaimModal/ClaimModal";
 function Home() {
   const isBombOpen = useSelector(selectBombIsOpen);
   const isClaim = useSelector(selectToClaim);
-  const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   if (isBombOpen) {
-  //     dispatch(isBoom());
-  //   }
-  // }, [isBombOpen, dispatch]);
 
   return (
     <div className="container mx-auto pl-[10px] pr-[10px]">
